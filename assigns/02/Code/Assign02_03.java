@@ -61,6 +61,6 @@ public class Assign02_03 {
 		System.out.println("Test: " + solve_3sum(A7) + " - Expected: false");
 
 		Integer[] A8 = {-1,0};
-		System.out.println("Test: " + solve_3sum(A7) + " - Expected: false");
+		System.out.println("Test: " + solve_3sum(A8) + " - Expected: true");
     }
 }
