@@ -9,5 +9,15 @@ public class Assign02_01 {
      */
     public void main(String[] argv) {
 	// Please give your implementation here
+        int i = 2147483647;
+        int bits = 0;
+
+        while(i>0)
+        {
+            i = i/2;
+            bits++;
+        }
+
+        System.out.println(bits);
     }
 }
