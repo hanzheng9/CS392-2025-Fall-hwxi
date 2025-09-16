@@ -47,7 +47,7 @@ public class Assign02_02 {
         }
     }
 
-    public void main(String[] argv) {
+    public static void main(String[] argv) {
 	// Please write some testing code for your implementation of 'indexOf'
         Integer[] numbers = {1, 3, 5, 7, 9, 11, 13};
 

@@ -7,7 +7,7 @@ public class Assign02_01 {
       is expected return the correct answer instantly. Note that you can only use arithmetic
       operations here. In particular, NO BIT-WISE OPERATIONS ARE ALLOWED.
      */
-    public void main(String[] argv) {
+    public static void main(String[] argv) {
 	// Please give your implementation here
         int i = 2147483647;
         int bits = 0;
