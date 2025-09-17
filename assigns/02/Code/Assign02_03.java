@@ -11,7 +11,7 @@ public class Assign02_03 {
 	// Why is your implementation soft O(n^2)?
 		int i = 0;
 		int j = i + 1;
-		HashMap<Integer, List<Integer>> sums = new HashMap<>();
+		HashMap<Integer, List<List<Integer>>> sums = new HashMap<>();
 
 		while(i<A.length)
 		{
@@ -20,7 +20,11 @@ public class Assign02_03 {
 				List<Integer> indexes = new ArrayList<>();
 				indexes.add(i);
 				indexes.add(j);
-				sums.put(A[i]+A[j],indexes);
+				if (!sums.containsKey(A[i] + A[j])) 
+				{
+            		sums.put(A[i] + A[j], new ArrayList<>());
+        		}
+        		sums.get(A[i] + A[j]).add(indexes);
 				j++;
 			}
 			i++;
@@ -31,7 +35,13 @@ public class Assign02_03 {
 		{
 			if(sums.containsKey(A[i]))
 			{
-				return true;
+				for (List<Integer> pair : sums.get(A[i]))
+				{
+					if(i!=pair.get(0) && i!=pair.get(1))
+					{
+						return true;
+					}
+				}
 			}
 		}
 
@@ -61,6 +71,6 @@ public class Assign02_03 {
 		System.out.println("Test: " + solve_3sum(A7) + " - Expected: false");
 
 		Integer[] A8 = {-1,0};
-		System.out.println("Test: " + solve_3sum(A8) + " - Expected: true");
+		System.out.println("Test: " + solve_3sum(A8) + " - Expected: false");
     }
 }
